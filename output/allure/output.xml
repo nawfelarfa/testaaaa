@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-06-21T10:19:46.799915" rpa="false" schemaversion="5">
+<suite id="s1" name="PageObject" source="c:\ORANGE\Tests\PageObject.robot">
+<test id="s1-t1" name="adduser" line="36">
+<kw name="openpage" owner="comun">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:47.748521" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-21T10:19:47.748521" elapsed="7.081079"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-21T10:19:54.829600" elapsed="0.063989"/>
+</kw>
+<status status="PASS" start="2024-06-21T10:19:47.748521" elapsed="7.145068"/>
+</kw>
+<kw name="login" owner="authentification">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:19:54.901589" elapsed="0.733158"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:55.634747" level="INFO">Typing text 'admin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>${user}</arg>
+<arg>${administareur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:19:55.634747" elapsed="0.327998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:19:55.962745" elapsed="0.055998"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:56.018743" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-06-21T10:19:56.098743" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${motpass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:19:56.018743" elapsed="0.264000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seconnecter}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:19:56.282743" elapsed="0.047998"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:56.338742" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>${seconnecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:19:56.330741" elapsed="1.254039"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:57.600766" level="INFO">Page title is 'OrangeHRM'.</msg>
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-06-21T10:19:57.584780" elapsed="0.015986"/>
+</kw>
+<status status="PASS" start="2024-06-21T10:19:54.893589" elapsed="2.707177"/>
+</kw>
+<kw name="ajoutuser" owner="ajoutuser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${admin}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:19:57.608767" elapsed="0.475156"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:19:58.083923" level="INFO">Clicking element 'xpath://a[contains(@href, "index.php/admin/viewAdminModule")]'.</msg>
+<arg>${admin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:19:58.083923" elapsed="1.629581"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userplus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:19:59.713504" elapsed="0.570724"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:20:00.284228" level="INFO">Clicking element 'xpath://button[@type='button' and contains(concat(' ', @class, ' '), ' oxd-button ') and contains(concat(' ', @class, ' '), ' oxd-button--medium ') and contains(concat(' ', @class, ' '), ' oxd-button--secondary ')]'.</msg>
+<arg>${userplus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:20:00.284228" elapsed="0.684946"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-06-21T10:20:00.977174" level="INFO" html="true">Getting file '&lt;a href="file://C:\orange\Ressources\JDD\listeuser.csv"&gt;C:\orange\Ressources\JDD\listeuser.csv&lt;/a&gt;'.</msg>
+<msg time="2024-06-21T10:20:00.977174" level="INFO">${file_content} = role,statut,employer,usernom,mot de passse
+Admin,Enabled,Test 71 FanchesFanshes,mohamed,1234567A
+Admin,Enabled,ESN,naoufel,123789A
+
+</msg>
+<var>${file_content}</var>
+<arg>C:\\orange\\Ressources\\JDD\\listeuser.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-06-21T10:20:00.977174" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.001174" level="INFO">${table} = [['Admin', 'Enabled', 'Test 71 FanchesFanshes', 'mohamed', '1234567A'], ['Admin', 'Enabled', 'ESN', 'naoufel', '123789A'], ['']]</msg>
+<var>${table}</var>
+<arg>[line.split(',') for line in $file_content.splitlines()[1:]]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-21T10:20:00.985174" elapsed="0.016000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.001174" level="INFO">${role} = Admin</msg>
+<var>${role}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.001174" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.001174" level="INFO">${stat} = Enabled</msg>
+<var>${stat}</var>
+<arg>${row}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.001174" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.001174" level="INFO">${emlpoyer} = Test 71 FanchesFanshes</msg>
+<var>${emlpoyer}</var>
+<arg>${row}[2]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.001174" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.001174" level="INFO">${usernom} = mohamed</msg>
+<var>${usernom}</var>
+<arg>${row}[3]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.001174" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.009172" level="INFO">${motdepass} = 1234567A</msg>
+<var>${motdepass}</var>
+<arg>${row[4]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.001174" elapsed="0.007998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userrole}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.009172" elapsed="0.692806"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T10:20:01.701978" level="INFO">xpath://div[@class='oxd-select-text--after']</msg>
+<arg>${userrole}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.701978" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:20:01.701978" level="INFO">Clicking element 'xpath://div[@class='oxd-select-text--after']'.</msg>
+<arg>${userrole}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T10:20:01.701978" elapsed="0.080002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T10:20:02.086599" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-21T10:20:02.086599" level="FAIL">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</msg>
+<arg>//div[@class="oxd-select-text oxd-select-text--active and @text()="Admin"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-21T10:20:01.781980" elapsed="0.312602">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//div[@class="oxd-select-text oxd-select-text--active and @text()="Admin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${employername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${employername}</arg>
+<arg>${emlpoyer}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${usernom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userpassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.094582" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${userpassword}</arg>
+<arg>${motdepass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.102581" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${userconfirmpassword}</arg>
+<arg>${motdepass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.102581" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${usersave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.102581" elapsed="0.000000"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.102581" elapsed="0.000000"/>
+</kw>
+<var name="${row}">['Admin', 'Enabled', 'Test 71 FanchesFanshes', 'mohamed', '1234567A']</var>
+<status status="FAIL" start="2024-06-21T10:20:01.001174" elapsed="1.101407">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</status>
+</iter>
+<var>${row}</var>
+<value>@{table}</value>
+<status status="FAIL" start="2024-06-21T10:20:01.001174" elapsed="1.101407">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</status>
+</for>
+<tag>utilisateur</tag>
+<doc>ajouter un utilisateur</doc>
+<status status="FAIL" start="2024-06-21T10:19:57.600766" elapsed="4.501815">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-21T10:20:02.102581" elapsed="0.000000"/>
+</kw>
+<doc>ajouter un utilisateur</doc>
+<tag>utilisateur</tag>
+<status status="FAIL" start="2024-06-21T10:19:47.748521" elapsed="14.354060">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"oxd-select-text oxd-select-text--active and @text()=\"Admin\"]' is not a valid XPath expression."}
+  (Session info: chrome=125.0.6422.176)
+Stacktrace:
+	GetHandleVerifier [0x00007FF766921F52+60322]
+	(No symbol) [0x00007FF76689CEC9]
+	(No symbol) [0x00007FF766757EBA]
+	(No symbol) [0x00007FF76675DCEE]
+	(No symbol) [0x00007FF766760641]
+	(No symbol) [0x00007FF7667606E0]
+	(No symbol) [0x00007FF7667A733B]
+	(No symbol) [0x00007FF7667A773C]
+	(No symbol) [0x00007FF7667EE997]
+	(No symbol) [0x00007FF7667CC25F]
+	(No symbol) [0x00007FF7667EBC80]
+	(No symbol) [0x00007FF7667CBFC3]
+	(No symbol) [0x00007FF766799617]
+	(No symbol) [0x00007FF76679A211]
+	GetHandleVerifier [0x00007FF766C394AD+3301629]
+	GetHandleVerifier [0x00007FF766C836D3+3605283]
+	GetHandleVerifier [0x00007FF766C79450+3563680]
+	GetHandleVerifier [0x00007FF7669D4326+790390]
+	(No symbol) [0x00007FF7668A750F]
+	(No symbol) [0x00007FF7668A3404]
+	(No symbol) [0x00007FF7668A3592]
+	(No symbol) [0x00007FF766892F9F]
+	BaseThreadInitThunk [0x00007FFDD9A07344+20]
+	RtlUserThreadStart [0x00007FFDD9B426B1+33]
+</status>
+</test>
+<status status="FAIL" start="2024-06-21T10:19:46.799915" elapsed="15.318672"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">utilisateur</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="PageObject">PageObject</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-21T10:19:47.668523" level="ERROR">Error in file 'c:\ORANGE\Ressources\Keywords\ajoutuser.robot' on line 7: Invalid resource file extension '.csv'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+</errors>
+</robot>

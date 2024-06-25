@@ -1,0 +1,15 @@
+1716455636364	geckodriver	INFO	Listening on 127.0.0.1:60911
+1716455639867	mozrunner::runner	INFO	Running command: "C:\\Users\\mjaba\\.cache\\selenium\\firefox\\win64\\126.0\\firefox.exe" "--marionette" "--remote-debugging- ... 2" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\mjaba\\AppData\\Local\\Temp\\rust_mozprofiletCKBc5"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1716455649758	Marionette	INFO	Marionette enabled
+1716455651353	Marionette	INFO	Listening on port 60928
+Read port: 60928
+WebDriver BiDi listening on ws://127.0.0.1:60912
+1716455653729	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1716455684815	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+DevTools listening on ws://127.0.0.1:60912/devtools/browser/76772908-eac5-4868-b551-39adbcce4dc8
+1716455886189	Marionette	INFO	Stopped listening on port 60928
+Dynamically enable window occlusion 1
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"Places Connection shutdown","state":{"PlacesShutdownProgress":5},"filename":"/builds/worker/checkouts/gecko/toolkit/components/places/Database.cpp","lineNumber":484,"stack":""}] Barrier: profile-before-change
